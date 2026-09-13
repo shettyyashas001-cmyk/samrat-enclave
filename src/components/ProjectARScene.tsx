@@ -179,11 +179,11 @@ function MasterplanPlotsModel() {
   )
 }
 
-export default function ProjectARScene({ projectType = '', slug = '', type = '' }: { projectType?: string, slug?: string, type?: string }) {
-  const checkStr = `${projectType} ${slug} ${type}`.toLowerCase();
+export default function ProjectARScene({ projectType = '', slug = '' }: { projectType?: string, slug?: string }) {
+  const key = `${slug} ${projectType}`.toLowerCase();
   
-  const isApartment = checkStr.includes('apartment') || checkStr.includes('penthouse') || checkStr.includes('highrise') || checkStr.includes('tower') || checkStr.includes('commercial') || checkStr.includes('falcon-city');
-  const isPlot = checkStr.includes('plot') || checkStr.includes('masterplan') || checkStr.includes('enclave') || checkStr.includes('layout') || checkStr.includes('tech-enclave');
+  const isApartment = key.includes('tower') || key.includes('heights') || key.includes('apartment') || key.includes('falcon-city');
+  const isPlot = key.includes('plot') || key.includes('masterplan') || key.includes('enclave') || key.includes('layout') || key.includes('tech-enclave');
 
   return (
     <div className="w-full h-[500px] relative rounded-2xl overflow-hidden bg-slate-900 shadow-2xl border border-slate-800">
