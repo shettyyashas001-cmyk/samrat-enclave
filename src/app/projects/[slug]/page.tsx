@@ -186,7 +186,7 @@ export default async function ProjectDetails({ params }: { params: Promise<{ slu
             </div>
             
             {/* 3D Scene Component */}
-            <ProjectARScene type={project.dimensions} />
+            <ProjectARScene projectType={project.dimensions} slug={project.slug} type={project.dimensions} />
             
             {/* Configuration Details Table */}
             <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm mt-6">
