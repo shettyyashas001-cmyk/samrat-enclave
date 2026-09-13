@@ -186,7 +186,6 @@ export default async function ProjectDetails({ params }: { params: Promise<{ slu
             </div>
             
             {/* 3D Scene Component */}
-            {console.log('Rendering AR Scene for slug:', project.slug, 'type:', project.dimensions)}
             <ProjectARScene projectType={project.dimensions} slug={project.slug} />
             
             {/* Configuration Details Table */}
